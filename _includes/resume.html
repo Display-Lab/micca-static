@@ -1,0 +1,12 @@
+<h3 class="section-title">Planned Endpoints</h3>
+<dl class="experience">
+    {% for job in site.data.capabilities %}
+        <dt>
+            <p class="title">{{ job.title }}</p>
+            <p class="company">{{ job.purpose }}</p>
+        </dt><!--
+        --><dd>
+            <p>{{ job.description }}</p>
+        </dd>
+    {% endfor %}
+</dl>

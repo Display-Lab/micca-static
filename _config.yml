@@ -1,0 +1,22 @@
+# Jekyll Resume Theme
+
+# Site settings
+title: MICCA Report
+email: displaylab@umich.edu
+description: Michigan Collaborative for Contraceptive Access
+baseurl: ""
+url: "https://www.contraceptiveaccess.org/"
+name: MICCA
+purpose: Performance Reporting Tool
+location: Name of Hosting Organization(s)
+languages: HTML, CSS and Javascript
+email_address: displaylab@umich.edu
+codepen_username: false
+github_username: false
+twitter_username: false
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - README.md

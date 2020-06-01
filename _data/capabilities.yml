@@ -1,0 +1,15 @@
+-   title: "/dashboard"
+    purpose: Overview
+    description: Landing page for authenticated users. View uploaded data sets and generated reports for authenticated users.
+
+-   title: "/login"
+    purpose: IAM
+    description: Redirection page to authentication service for identiy and access management. 
+
+-   title: "/upload"
+    purpose: Data aggregation and upload
+    description: Page providing functionality to process and then upload site performance data.  
+
+-   title: "/about"
+    purpose: Reference material
+    description: Brief description of measures and data collection.  
