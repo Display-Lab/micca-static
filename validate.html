@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<script src='assets/js/micca.js'></script>
+
+<h3 class="section-title">About Validation</h3>
+<div id='intro-section'>
+  <p>
+  The data validator runs locally in your web browser.  
+  No data is transmitted to anywhere. 
+  </p>
+</div>
+
+<h3 class="section-title">Date Validation</h3>
+<div id='getter-section'>
+  <p>Step 1: Select MICCA input file.</p>
+  <input id='input-file' type='file' onchange='console.log("filechange");'>
+</div>
+
+<div id='output-section'>
+  <p>Step 2: Get report of issues with input data</p>
+  <div id='validation-output'></div>
+</div>
