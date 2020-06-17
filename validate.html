@@ -23,10 +23,20 @@ layout: default
   <!-- Function to handle file input and display results -->
   <!-- Extract this to a bundle later -->
   <script> 
+    function createReportDescript(problems){
+      probDiv = document.createElement("div");
+      if("headerProblems" in problems){
+
+      }
+      if("rowProblems" in problems){
+        
+
+      }
+
+    }
+
     function processData(rawText){
       let outsec = document.getElementById('validation-output');
-
-      console.log("validation run");
 
       //Check validity and get list of problems
       let isValid = micca.Validator.validateFile(rawText);
@@ -42,8 +52,6 @@ layout: default
         outP = outsec.appendChild( document.createElement("pre"));
         outP.innerHTML = JSON.stringify(problems, null, 2);
       }
-
-      console.log("element added");
     }
 
     function onChangeHandler(files){
