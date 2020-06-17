@@ -19,3 +19,9 @@ markdown: kramdown
 exclude:
   - README.md
   - stack.yml
+
+defaults:
+  - scope:
+      path: "assets/pdf/measures"
+    values:
+      measure: true

@@ -21,6 +21,12 @@ layout: default
 
 <a href="http://micca.report/index.html">M3 LARC 3PP</a>
 
+<ul>
+{% assign measure_files = site.static_files | where: "measure", true %}
+{% for measure in measure_files %}
+<li><a href="{{ measure.path }}">{{ measure.name }}</a></li>
+{% endfor %}
+</ul>
 
 </dl>
 </div>
