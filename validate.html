@@ -31,10 +31,53 @@ layout: default
   <!-- Function to handle file input and display results -->
   <!-- Extract this to a bundle later -->
   <script> 
+    function createReportDescript(problems){
+      let probDiv = document.createElement("div");
+      probDiv.setAttribute('class', 'container');
+      let dl = probDiv.appendChild(document.createElement("dl"));
+      dl.setAttribute('class','reportout');
+
+      let dt,dd,p;
+      if("headerProblems" in problems){
+        let hprobs = problems['headerProblems'];
+        for( const key in hprobs){
+          dt = dl.appendChild(document.createElement("dt"));
+          dt.setAttribute('class','reportout');
+
+          p = dt.appendChild(document.createElement("p"));
+          p.setAttribute('class','title');
+          p.innerHTML = `${key}:`; 
+
+          dd = dl.appendChild(document.createElement("dd"));
+          dd.setAttribute('class','reportout');
+
+          p = dd.appendChild(document.createElement("p"));
+          p.innerHTML = hprobs[key].toString(); 
+        }
+      }
+      if("rowProblems" in problems){
+        let rprobs = problems['rowProblems'];
+        for( const key in rprobs){
+          dt = dl.appendChild(document.createElement("dt"));
+          dt.setAttribute('class','reportout');
+
+          p = dt.appendChild(document.createElement("p"));
+          p.setAttribute('class','title');
+          p.innerHTML = `Row ${key}:`; 
+
+          dd = dl.appendChild(document.createElement("dd"));
+          dd.setAttribute('class','reportout');
+
+          p = dd.appendChild(document.createElement("p"));
+          p.innerHTML = rprobs[key].toString(); 
+        }
+      }
+
+      return(probDiv);
+    }
+
     function processData(rawText){
       let outsec = document.getElementById('validation-output');
-
-      console.log("validation run");
 
       //Check validity and get list of problems
       let isValid = micca.Validator.validateFile(rawText);
@@ -47,11 +90,9 @@ layout: default
       outP.innerHTML = `Input file is: ${isValid ? "Valid" : "Invalid"}`;
 
       if(!isValid){
-        outP = outsec.appendChild( document.createElement("pre"));
-        outP.innerHTML = JSON.stringify(problems, null, 2);
+        let details = createReportDescript(problems);
+        outsec.appendChild( details);
       }
-
-      console.log("element added");
     }
 
     function onChangeHandler(files){
