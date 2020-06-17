@@ -4,23 +4,18 @@ layout: default
 
 <script src='assets/js/micca.js'></script>
 
-<h3 class="section-title">About Validation</h3>
 <div id='intro-section'>
   <p>
   The data validator runs locally in your web browser.  
-  No data is transmitted to anywhere. 
+  No data is transmitted anywhere. 
   </p>
 </div>
 
-<h3 class="section-title">Data Validation</h3>
-<div id='example-data'>
-  Example data: <a href="assets/csv/good_data.csv">good_data.csv</a>, <a href="assets/csv/bad_data.csv">bad_data.csv</a>, <a href="assets/csv/good_data.xlsx">good_data.xlsx</a>, <a href="assets/csv/bad_header.csv">bad_header.csv</a>
-</div>
 <div id='getter-section'>
   <p>Step 1: Select MICCA input file.</p>
   <input id='input-file' type='file' onchange='onChangeHandler(this.files)'>
 </div>
-
+<p></p>
 <div id='output-section'>
   <p>Step 2: Get report of issues with input data</p>
   <div id='validation-output'></div>
