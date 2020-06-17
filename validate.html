@@ -32,15 +32,48 @@ layout: default
   <!-- Extract this to a bundle later -->
   <script> 
     function createReportDescript(problems){
-      probDiv = document.createElement("div");
-      if("headerProblems" in problems){
+      let probDiv = document.createElement("div");
+      probDiv.setAttribute('class', 'container');
+      let dl = probDiv.appendChild(document.createElement("dl"));
+      dl.setAttribute('class','reportout');
 
+      let dt,dd,p;
+      if("headerProblems" in problems){
+        let hprobs = problems['headerProblems'];
+        for( const key in hprobs){
+          dt = dl.appendChild(document.createElement("dt"));
+          dt.setAttribute('class','reportout');
+
+          p = dt.appendChild(document.createElement("p"));
+          p.setAttribute('class','title');
+          p.innerHTML = `${key}:`; 
+
+          dd = dl.appendChild(document.createElement("dd"));
+          dd.setAttribute('class','reportout');
+
+          p = dd.appendChild(document.createElement("p"));
+          p.innerHTML = hprobs[key].toString(); 
+        }
       }
       if("rowProblems" in problems){
-        
+        let rprobs = problems['rowProblems'];
+        for( const key in rprobs){
+          dt = dl.appendChild(document.createElement("dt"));
+          dt.setAttribute('class','reportout');
 
+          p = dt.appendChild(document.createElement("p"));
+          p.setAttribute('class','title');
+          p.innerHTML = `Row ${key}:`; 
+
+          dd = dl.appendChild(document.createElement("dd"));
+          dd.setAttribute('class','reportout');
+
+          p = dd.appendChild(document.createElement("p"));
+          p.innerHTML = rprobs[key].toString(); 
+        }
       }
 
+      return(probDiv);
     }
 
     function processData(rawText){
@@ -57,8 +90,8 @@ layout: default
       outP.innerHTML = `Input file is: ${isValid ? "Valid" : "Invalid"}`;
 
       if(!isValid){
-        outP = outsec.appendChild( document.createElement("pre"));
-        outP.innerHTML = JSON.stringify(problems, null, 2);
+        let details = createReportDescript(problems);
+        outsec.appendChild( details);
       }
     }
 
