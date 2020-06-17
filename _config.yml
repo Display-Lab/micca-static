@@ -6,9 +6,7 @@ email: displaylab@umich.edu
 description: Michigan Collaborative for Contraceptive Access
 baseurl: ""
 url: "https://www.contraceptiveaccess.org/"
-name: MICCA
-purpose: Performance Reporting Tool
-location: Name of Hosting Organization(s)
+name: MICCA Performance Reporting Tool
 languages: HTML, CSS and Javascript
 email_address: displaylab@umich.edu
 codepen_username: false

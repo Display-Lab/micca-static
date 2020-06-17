@@ -1,9 +1,10 @@
-<h3 class="section-title">Planned Endpoints</h3>
 <dl class="experience">
     {% for job in site.data.capabilities %}
         <dt>
             <p class="title">{{ job.title }}</p>
-            <p class="company">{{ job.purpose }}</p>
+            <div class="company">
+              <a href={% link {{ job.path }} %}>{{job.path}}</a>
+            </div>
         </dt><!--
         --><dd>
             <p>{{ job.description }}</p>
