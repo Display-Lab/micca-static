@@ -36,6 +36,17 @@ aws s3api put-bucket-policy --bucket ${S3BUCKET} --policy file://_bucket_policy.
 
 ### Update S3 Bucket files.
 
+#### Get external assets
+The files under `assets/pdfs` tracked int this repo are placeholders.
+The actual content is stored in Google Drive.
+The changes are not tracked by use of `git update-index --assume-unchanged assets/pdf/*`.
+
+Retrieve actual content and overwrite placeholders before updating S3 storage.
+
+#### Push to S3 storage.
+The static site is backed by an S3 bucket.  Updating the files there will update the site distribution.
+
 ```sh
 aws s3 cp --recursive _site/ s3://${S3BUCKET}
 ```
+
