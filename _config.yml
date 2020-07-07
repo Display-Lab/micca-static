@@ -20,7 +20,6 @@
 
 title: MICCA Performance Reporting
 description: MICCA Performance Reporting Site
-baseurl: /micca
 url: https://micca.report
 permalink: /:categories/:title
 
@@ -44,21 +43,20 @@ instagram_username:
 
 
 # Navivation
-nav_item_one: Home
-nav_item_one_link: https://micca.report/
-
-nav_item_two: Validate data
-nav_item_two_link: https://micca.report/validate
-
-nav_item_three: Submit data
-nav_item_three_link: https://micca.report/submit
+nav_items:
+  - title: Home
+    path: /
+  - title: Validate data
+    path: /validate
+  - title: Submit data
+    path: /submit
 
 nav_button: Sign in
-nav_button_link: https://micca.report/login
+nav_button_link: /login
 
 # More Help
 help_one_title: Help Desk
-help_one_content: Feel free to report an issue via GitHub, or email us at displaylab@umich.edu 
+help_one_content: Report an issue via GitHub, or email us at displaylab@umich.edu 
 help_one_button: Report an issue
 help_one_link: https://github.com/Display-Lab/micca-static/issues
 
