@@ -11,7 +11,7 @@ title: Home
           </div>
           {% for category in site.data.category_list %}
           <div class="column col-4 col-md-6 col-sm-12">
-            <a href="{{ site.baseurl }}/{{ category.name | slugify }}">
+            <a href="{{ site.baseurl }}/{{ category.name | slugify }}.html">
               <div class="card card-link">
                 <div class="card-body text-center my-4">
                   <h5 class="text-bold">{{ category.name }}</h5>
