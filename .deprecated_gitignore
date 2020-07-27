@@ -1,10 +1,7 @@
 _site
 .sass-cache
-.jekyll-cache
+.git
 .jekyll-metadata
 .jekyll-cache/
 _includes/.jekyll-cache/
-vendor
-Odin.ai
 
-external_pdfs/*

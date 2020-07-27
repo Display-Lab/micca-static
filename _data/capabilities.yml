@@ -1,8 +1,0 @@
--   title: "validate input data"
-    description: Check if input data is structurally valid.
-    path: validate.html
-
--   title: "resources"
-    description: Landing page for authenticated users. View uploaded data sets and generated reports for authenticated users.
-    path: resources.html
-

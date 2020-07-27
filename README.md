@@ -50,3 +50,12 @@ The static site is backed by an S3 bucket.  Updating the files there will update
 aws s3 cp --recursive _site/ s3://${S3BUCKET}
 ```
 
+## Based on Odin Knowledge Base
+
+Odin is a Jekyll template for knowledgebases and support sites. Please see the [official Jekyll docs](https://jekyllrb.com/docs/) for more info on running, building and editing a Jekyll site.
+
+*Full documentation is in the works and coming soon*
+
+
+
+

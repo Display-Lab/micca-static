@@ -1,0 +1,11 @@
+---
+#This file defines all the categories you are using
+- data-collection:
+  name: Data Collection
+  description: Resources for MICCA data collection
+- performance-measures:
+  name: Performance Measures
+  description: Specifications for performance measurement
+- schedule:
+  name: Schedule
+  description: Reporting calendar and schedules

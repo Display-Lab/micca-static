@@ -1,31 +1,32 @@
 ---
-layout: default
+layout: post
+title: Validate your data
 ---
+
 
 <script src='assets/js/micca.js'></script>
 
 
 <div class="container">
-
         <div class="intro">
-            <p class="intro__post">Validate your data</p>
+            <p class="intro__post"> </p>
         </div>
+
 
 
 <div id='intro-section'>
   <p>
-  The data validator runs locally in your web browser.  
-  No data is transmitted anywhere. 
+  Use this page to check the structure of your data and identify any data that don't conform to the definitions in the data dictionary. This tool runs locally in your web browser and does not transmit data anywhere.
   </p>
 </div>
 
 <div id='getter-section'>
-  <p>Step 1: Select MICCA input file.</p>
+  <p>Step 1: Select MICCA input file:</p>
   <input id='input-file' type='file' onchange='onChangeHandler(this.files)'>
 </div>
 <p></p>
 <div id='output-section'>
-  <p>Step 2: Get report of issues with input data</p>
+  <p>Step 2: View report of issues with input data</p>
   <div id='validation-output'></div>
 
   <!-- Function to handle file input and display results -->
@@ -108,10 +109,15 @@ layout: default
         // Define what action to take upon loading input file
         reader.onload = function(e) { processData(reader.result); }
         // Do the read
-        reader.readAsText(file);	
+        reader.readAsText(file);        
       }
       catch(err){ console.log(err); }
     }
   </script>
 </div>
 </div>
+
+
+
+
+

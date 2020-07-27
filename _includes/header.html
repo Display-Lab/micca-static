@@ -1,19 +1,10 @@
-<header>
-    <div class="container">
-        <div class="intro">
-            <p class="intro__main"><span>{{ site.name }}</span><br/>{{ site.purpose }}</p>
-            <p class="intro__post">{{ site.location }}</p>
-        </div>
-
-        <div class="social">
-          <a href="index.html">Home</a> 
-          <a href="validate.html">Validate your data</a> 
-          <a href="resources.html">Resources</a> 
-          {% if site.github_username %}<a href="http://github.com/{{ site.github_username }}" target="_blank">GitHub</a>{% endif %}
-          {% if site.codepen_username %}<a href="http://codepen.io/{{ site.codepen_username }}" target="_blank">CodePen</a>{% endif %}
-          {% if site.twitter_username %}<a href="http://twitter.com/{{ site.twitter_username }}" target="_blank">Twitter</a>{% endif %}
-          {% if site.email_address %}<a href="mailto:{{ site.email_address }}" target="_blank">Contact</a>{% endif %}
-        </div>
-
+<div class="header-bg">
+  <div class="container-full">
+    <div class="header ">
+      {% include nav.html %}
+      <header class="container grid-xl landing-header">
+        <div class="pb-16"></div>
+      </header>
     </div>
-</header>
+  </div>
+</div>
