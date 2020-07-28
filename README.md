@@ -2,12 +2,15 @@
 
 A simple Jekyll theme for displaying placeholder website.
 
-## Customize
-To customise you just need to fill out the `_config.yml` yaml files `_data` directory with your own details.
+## Running locally
+The `_config_dev.yml` values with override the base `_config.yml`
+```sh
+bundle exec jekyll s --config _config.yml,_config_dev.yml
+```
 
 ## Build site
 ```sh
-jekyll b
+bundle exec jekyll b
 ```
 ## Manual Deploy
 All but updating the bucket files should only have to be done once.
@@ -53,9 +56,3 @@ aws s3 cp --recursive _site/ s3://${S3BUCKET}
 ## Based on Odin Knowledge Base
 
 Odin is a Jekyll template for knowledgebases and support sites. Please see the [official Jekyll docs](https://jekyllrb.com/docs/) for more info on running, building and editing a Jekyll site.
-
-*Full documentation is in the works and coming soon*
-
-
-
-

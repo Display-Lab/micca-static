@@ -1,0 +1,8 @@
+# Navivation
+nav_items:
+  - title: Home
+    path: /
+  - title: Validate data
+    path: /validate
+  - title: Submit data
+    path: /submit
