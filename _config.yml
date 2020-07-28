@@ -51,9 +51,6 @@ nav_items:
   - title: Submit data
     path: /submit
 
-nav_button: Sign in
-nav_button_link: /login
-
 # More Help
 help_one_title: Help Desk
 help_one_content: Report an issue via GitHub, or email us at displaylab@umich.edu 
