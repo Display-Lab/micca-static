@@ -8,3 +8,5 @@ vendor
 Odin.ai
 
 external_pdfs/*
+
+deploy/params.json
