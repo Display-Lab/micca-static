@@ -35,6 +35,10 @@
 // Utility classes
 @import "../_scss/utilities";
 
+// Custom direct overrides for display lab hackery
+@import "../_scss/display_lab";
+
+
 #anglesvg {
   display: block;
 }

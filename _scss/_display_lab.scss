@@ -1,0 +1,28 @@
+// Overrides and hacks by the Display Lab
+// TODO: Sort out a sane nesting and selector organization 
+
+.subhead-paragraph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .1rem;
+  margin-top: .2rem;
+  font-size: 1.2rem;
+}
+
+.subhead-list {
+  width: 40%;
+  color: #2b2c34;
+  //color: #b3b3cb;
+  border: 1px solid #f5f6ff;
+  background: #fffffe;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(55,65,80,0.04);
+  padding: 2rem;
+  top-padding: 1rem;
+}
+
+.subhead-list-item {
+  text-align: left;
+  line-height: 2.0;
+}
