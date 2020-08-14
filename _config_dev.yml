@@ -1,8 +1,9 @@
 # Navivation
+# dashboard and submit endpoints are local only stubs
 nav_items:
-  - title: Home
-    path: /
   - title: Validate data
-    path: /validate
+    path: /validate.html
+  - title: Dashboard
+    path: /dashboard
   - title: Submit data
     path: /submit

@@ -43,12 +43,12 @@ instagram_username:
 
 # Navivation
 nav_items:
-  - title: Home
-    path: /
   - title: Validate data
-    path: /validate
-  - title: Submit data
+    path: /validate.html
+  - title: Dashboard
     path: https://larc.micca.report/dashboard
+  - title: Submit data
+    path: https://larc.micca.report/submit
 
 # More Help
 help_one_title: Help Desk
