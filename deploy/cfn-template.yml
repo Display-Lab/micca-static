@@ -17,15 +17,6 @@ Parameters:
     Type: String
     Description: Hosted zone id of the custom domain
 
-Mappings:
-  RegionMap:
-    us-east-1:
-      S3hostedzoneID: Z3AQBSTGFYJSTF
-      websiteendpoint: s3-website-us-east-1.amazonaws.com
-    us-west-1:
-      S3hostedzoneID: Z2F56UZL2M1ACD
-      websiteendpoint: s3-website-us-west-1.amazonaws.com
-
 Resources:
 
   ##############
