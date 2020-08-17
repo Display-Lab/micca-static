@@ -66,7 +66,7 @@ Resources:
               OriginAccessIdentity: !Sub origin-access-identity/cloudfront/${OriginAccessIdentity}
         Enabled: 'true'
         Comment: Distribute with cloudfront to get that sweet https
-        DefaultRootObject: ''
+        DefaultRootObject: 'index.html'
         IPV6Enabled: 'true'
         Aliases:
           - !Sub ${MainDomainName}
@@ -92,29 +92,47 @@ Resources:
   #######
   # DNS #
   #######
-  # TODO: Make Record set Group
   
-  # This record set can't be pre-existing
-  AssetDNSA:
-    Type: AWS::Route53::RecordSet
+  CloudfrontDNS:
+    Type: AWS::Route53::RecordSetGroup
     Properties:
-      Name: !Sub ${MainDomainName} 
       HostedZoneId: !Ref ZoneId
-      Comment: Static site IPV4 record
-      Type: A
-      AliasTarget:
-        HostedZoneId: Z2FDTNDATAQYW2
-        DNSName: !GetAtt SiteDistribution.DomainName
-        EvaluateTargetHealth: false
+      RecordSets:
+        - Name: !Sub ${MainDomainName} 
+          Type: A
+          AliasTarget:
+            HostedZoneId: Z2FDTNDATAQYW2
+            DNSName: !GetAtt SiteDistribution.DomainName
+            EvaluateTargetHealth: false
+        - Name: !Sub ${MainDomainName} 
+          Type: AAAA
+          AliasTarget:
+            HostedZoneId: Z2FDTNDATAQYW2
+            DNSName: !GetAtt SiteDistribution.DomainName
+            EvaluateTargetHealth: false
+      
+  
+#  # This record set can't be pre-existing
+#  AssetDNSA:
+#    Type: AWS::Route53::RecordSet
+#    Properties:
+#      Name: !Sub ${MainDomainName} 
+#      HostedZoneId: !Ref ZoneId
+#      Comment: Static site IPV4 record
+#      Type: A
+#      AliasTarget:
+#        HostedZoneId: Z2FDTNDATAQYW2
+#        DNSName: !GetAtt SiteDistribution.DomainName
+#        EvaluateTargetHealth: false
 
-  AssetDNSAAAA:
-    Type: AWS::Route53::RecordSet
-    Properties:
-      Name: !Sub ${MainDomainName} 
-      HostedZoneId: !Ref ZoneId
-      Comment: Static site IPV6 record
-      Type: AAAA
-      AliasTarget:
-        HostedZoneId: Z2FDTNDATAQYW2
-        DNSName: !GetAtt SiteDistribution.DomainName
-        EvaluateTargetHealth: false
+#  AssetDNSAAAA:
+#    Type: AWS::Route53::RecordSet
+#    Properties:
+#      Name: !Sub ${MainDomainName} 
+#      HostedZoneId: !Ref ZoneId
+#      Comment: Static site IPV6 record
+#      Type: AAAA
+#      AliasTarget:
+#        HostedZoneId: Z2FDTNDATAQYW2
+#        DNSName: !GetAtt SiteDistribution.DomainName
+#        EvaluateTargetHealth: false
