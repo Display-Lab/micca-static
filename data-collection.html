@@ -1,14 +1,38 @@
 ---
-layout: category
-category: data-collection
-title: Data Collection
+layout: post
+title: Data collection
 ---
 
-<!-- Choose the classes for this div that matches the css styling you want -->
-<div class="column col-11 col-mx-auto text-center">
-  <h4 class="text-secondary"> Learn more about these data collection topics: </h4>
+<div class="container">
+        <div class="intro">
+            <p class="intro__post"> </p>
+        </div>
+
+
+
+<div id='intro-section'>
+  <p> A blank template spreadsheet for collection of MICCA data is available as an <a href=https://drive.google.com/file/d/1XjvZgGzlcTAw0L2wgu3By0zOCq5It_rB/view>Excel spreadsheet</a> or a <a href=https://docs.google.com/spreadsheets/d/1Vk4WWSx5U2AF28FE2eMHKuCNW2Ea1I5-2bEGN7P5qCI/edit#gid=0>Google Sheet</a>
+  </p>
+
+  <p>
+  Definitions of the collected variables their allowed values are specified in the <a href=https://drive.google.com/file/d/1S29xBrtnBHl-4IqUFSSOOOza7ekrqY0i/view?usp=sharing>MICCA Data Dictionary (PDF)</a>. 
+  </p>
+
+  <p>
+ There are a few key requirements that should be followed in general when preparing the spreadsheet:
+  </p>
+
+  <ul>
+        <li><b>One row per patient:</b> The spreadsheet contains patients who delivered, and each patient appears only once.</li>
+        <li><b>No blank values:</b> Where data is missing or unavailable, the value “unknown” should be entered, rather than entering nothing. The specific meaning of “unknown” is defined for each column.</li>
+        <li><b>Population cohort or sample:</b> The data are intended to a) include all patients who delivered in a cohort, or b) represent a sample of the population of patients who delivered within each quarterly cohort. When a sample of patients is used, these should be randomly selected from each month of the quarter if possible.</li>
+
+  </ul>
+
+
+
+
 </div>
 
-{% for post in site.categories[page.category] %}
-  {% include article-card.html %}
-{% endfor %}
+
+
