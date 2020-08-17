@@ -12,6 +12,26 @@ bundle exec jekyll s --config _config.yml,_config_dev.yml
 ```sh
 bundle exec jekyll b
 ```
+
+## Deploy
+
+### Setup Infrastructure
+Deploy AWS components using cloudformation.
+
+```sh
+aws cloudformation create-stack \
+  --template-body file://deploy/cfn-template.yml \
+  --parameters file://deploy/params.json \
+  --stack-name micca-static
+```
+### Push Site Files to Bucket
+The aws bucket name will be whatever the MainDomainName param is prefixed with "static-site." 
+E.g. static-site.example.com
+
+```sh
+aws s3 sync _site/* s3://${S3BUCKET}
+```
+
 ## Manual Deploy
 All but updating the bucket files should only have to be done once.
 

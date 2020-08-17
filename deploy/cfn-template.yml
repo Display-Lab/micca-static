@@ -60,7 +60,7 @@ Resources:
     Properties:
       DistributionConfig:
         Origins:
-          - DomainName: !GetAtt SiteStorage.DomainName
+          - DomainName: !GetAtt SiteStorageBucket.DomainName
             Id: S3-static-site
             S3OriginConfig:
               OriginAccessIdentity: !Sub origin-access-identity/cloudfront/${OriginAccessIdentity}
